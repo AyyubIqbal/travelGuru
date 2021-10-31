@@ -20,6 +20,8 @@ const Header = () => {
                         {user?.email ?
                             <span className='d-flex'>
                                 <Nav.Link as={Link} to="/addservice">Add A Service</Nav.Link>
+                                <Nav.Link as={Link} to="/manageorder">Manage Orders</Nav.Link>
+                                <Nav.Link as={Link} to="/myorder">My Orders</Nav.Link>
                                 <Button onClick={logOut} className='btn btn-primary'>Logout</Button>
                             </span> :
                             (<Nav.Link as={Link} to="/login">Login</Nav.Link>)}

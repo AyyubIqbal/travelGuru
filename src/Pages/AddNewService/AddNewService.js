@@ -23,7 +23,7 @@ const AddNewService = () => {
 
     };
     return (
-        <div>
+        <div className='vh-100'>
             <div className="add-service">
                 <h2 className='text-center'>Add a Service</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>

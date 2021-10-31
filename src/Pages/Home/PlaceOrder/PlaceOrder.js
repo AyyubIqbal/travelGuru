@@ -30,7 +30,7 @@ const PlaceOrder = () => {
         fetch(`https://bloodcurdling-blood-61270.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
-    }, [])
+    }, [serviceId])
 
     return (
         <section className=" bg-light py-5">
@@ -45,15 +45,13 @@ const PlaceOrder = () => {
 
                             <input defaultValue={user.email} {...register("email", { required: true })} />
                             {errors.email && <span className="error">This field is required</span>}
-                            <input placeholder="Address" defaultValue="" {...register("address")} />
-                            <input placeholder="City" defaultValue="" {...register("city")} />
+                            <input type="date" {...register("price")} placeholder="Price" />
                             <input placeholder="phone number" defaultValue="" {...register("phone")} />
 
                             <input type="submit" />
                         </form>
                     </div>
                     <div className="col-lg-6">
-                        {/* <h2>this is booking: {serviceId}</h2> */}
                         <h2>{service.name}</h2>
                         <p>{service.description}</p>
                         <h3>Price: ${service.price}</h3>
